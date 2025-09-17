@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exception handiling</title>
+</head>
+<body>
+    <!-- <script>
+        try{
+            //code that may throw a error
+        } catch (error){
+            //code to handle the error
+        }finally {
+            //code that will always execute
+        }
+    </script> -->
+<script>
+    //example
+
+    try{
+        let atmpin=2345;
+        if(atmpin > 0); {
+            throw "you entered wrong pin!."
+        }
+        console.log("you entered correct pin!.")
+    }
+    catch(error){
+        console.log(" "+error)
+    }
+    finally{
+        console.log("execution finished")
+    }
+</script>
+</body>
+</html>
