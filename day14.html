@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <!-- a promise in javascript is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value
+      
+      it has 3 possible states: -->
+
+      <script>
+            //   let TicketBooking=new Promise((resolve,reject)=>{
+            //          let booking=true;
+            //          if(booking)                
+            //              resolve()
+            //             else
+            //             reject()
+            //   })
+            //   .then(success)
+            //   .catch(failure)
+            //   function success(){
+            //     console.log("your ticket is confirmed")
+            //   }
+            //   function failure(){
+            //     console.log("no seats avaliable")
+            //   }
+            let tossCoin=new Promise((resolve,reject)=>{
+                let rand=Math.floor(Math.random()*2);
+                if (rand==0)
+                    resolve(rand)
+                else
+                     reject(rand)
+                      
+            })
+            .then(()=>console.log(`you won ${rand}`))
+            .catch((rand)=>console.log(`you lose ${rand}`))
+      </script>
+
+</body>
+</html>
