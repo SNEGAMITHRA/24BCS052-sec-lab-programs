@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            margin:auto;
+        }
+        .slider img{
+            width:80;
+            height: auto;
+        }
+    </style>
+</head>
+    <body>
+   <div class="slider">
+    <img src="./rihanna.jpg" alt="loding" id="display-image">
+
+    <button id="prev">previous</button>
+    <button id="next">Next</button>
+   </div> 
+   <script>
+    let image=["rihanna.jpg","shawn mendes.jpg","camila-cabello.jpg"]
+    let currentindex=0;
+    let display=document.getElementById("display-image");
+    let prevBtn=document.getElementById("prev");
+    let nextBtn=document.getElementById("next");
+    nextBtn.addEventListener("click",()=>{
+        currentindex=(currentindex+1)%image.length;//1
+        display.src=image[currentindex];
+    })
+
+    prevBtn.addEventListener("click",()=>{
+        currentindex=(currentindex-1 + image.length)%image.length;
+        //3 = 5 % 3 =2
+         display.src=image[currentindex];
+    })
+   </script>
+</body>
+</html>
